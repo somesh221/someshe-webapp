@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: redashuprojecthtmlwebsite 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redashuprojecthtmlwebsite
+  template:
+    metadata:
+      labels:
+        app: redashuprojecthtmlwebsite 
+    spec:
+      containers:
+        - name: redashuprojecthtmlwebsite 
+          image: ashutoshh.azurecr.io/redashuprojecthtmlwebsite
+          ports:
+          - containerPort: 80
